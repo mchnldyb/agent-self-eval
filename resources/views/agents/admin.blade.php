@@ -3,15 +3,15 @@
 @section('content')
 
     <div class="container">
-        <h3></h3>
-
-        <div class="col-md-12">
+        <h2 class="display-4 mb-3">All Reports</h2>
+        <hr/>
+        <div class="col-md-12 mt-4">
             @if(count($agents))
                 <table class="table" id="reports_table">
                     <thead class="thead-dark">
                     <tr>
                         <th scope="col">Date</th>
-                        <th scope="col">User</th>
+                        <th scope="col">Agent</th>
                         <th scope="col">Issue</th>
                         <th scope="col">Client Satisfied</th>
                         <th scope="col">Self Confidence</th>
@@ -65,4 +65,17 @@
     </div>
 
 
+@endsection
+
+@section('footer_scripts')
+    <script>
+        $(document).ready( function () {
+            var table =  $('#reports_table').DataTable({
+                dom: 'Bfrtip',
+                buttons: [
+                    'csv', 'excel', 'pdf', 'print'
+                ]
+            });
+        } );
+    </script>
 @endsection

@@ -52,20 +52,23 @@ class AgentController extends Controller
         //dd($request);
 
         $this->validate(request(),[
-            'issuehandled' => 'required|integer',
-            'clientsatisfied' => 'required',
-            'clientconfidence' => 'required',
-            'inlineRadioOptions' => 'required'
+            'Issue_Number' => 'required|integer',
+            'client_satisfied' => 'required',
+            'client_confidence' => 'required',
+            'Self_Rating' => 'required'
         ]);
+
 
         $agent = new Agent;
 
         $agent->date = Carbon::now()->toDateString();
         $agent->agent = Auth::user()->name;
-        $agent->issue_number = $request->issuehandled;
-        $agent->satisfaction = $request->clientsatisfied;
-        $agent->confidence = $request->clientconfidence;
-        $agent->rating = $request->inlineRadioOptions;
+        $agent->issue_number = $request->Issue_Number;
+        $agent->satisfaction = $request->client_satisfied;
+        $agent->confidence = $request->client_confidence;
+        $agent->rating = $request->Self_Rating;
+
+
 
         $agent->save();
 
