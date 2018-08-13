@@ -5,10 +5,11 @@
     <div class="container">
         <h3>My Evaluations</h3>
 
-        <button type="button" onclick="window.location='{{ route('home') }}'" class="btn btn-outline-info mb-4"><< Back to Dashboard</button>
+
 
         <div class="col-md-12">
             @if(count($agents))
+                <button type="button" onclick="window.location='{{ route('home') }}'" class="btn btn-outline-info mb-4"><< Back to Dashboard</button>
                 <table class="table" id="reports_table">
                     <thead class="thead-light">
                     <tr>
