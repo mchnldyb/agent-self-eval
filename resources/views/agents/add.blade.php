@@ -7,7 +7,7 @@
             <div class="col-md-10">
                 <div class="card">
                     <div class="card-header">
-                        <h2>Add new report</h2>
+                        <h2>Evaluate</h2>
                     </div>
 
                     <div class="card-body">

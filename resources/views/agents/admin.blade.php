@@ -3,12 +3,12 @@
 @section('content')
 
     <div class="container">
-        <h2 class="display-4 mb-3">All Reports</h2>
+        <h2 class="display-4 mb-3">All Evaluations</h2>
         <hr/>
         <div class="col-md-12 mt-4">
             @if(count($agents))
                 <table class="table" id="reports_table">
-                    <thead class="thead-dark">
+                    <thead class="thead-light">
                     <tr>
                         <th scope="col">Date</th>
                         <th scope="col">Agent</th>
