@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Agent;
+use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -25,11 +26,22 @@ class HomeController extends Controller
      */
     public function index()
     {
+        $admins = collect(['edmund.kumasa@gcnetghana.com', 'dramani.abdulai@gcnetghana.com', 'mackenzie.acquah@gcnetghana.com', 'roberta.nutakor@gcnetghana.com']);
+        $allusers = User::all();
+        $users = collect([]);
 
-        if (Auth::user()->email == 'edmund.kumasa@gcnetghana.com'){
+        foreach ($allusers as $user){
+            if ($admins->contains($user->email)){
+                continue;
+            }
+            $users->push($user);
+        }
+
+        if ($admins->contains(Auth::user()->email)){
 //            dd(Auth::user()->email);
             $agents = Agent::all();
-            return view('agents.admin', compact('agents'));
+            //dd($normal_users);
+            return view('agents.admin', compact('agents','users'));
         }
 
         else{

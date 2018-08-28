@@ -16,7 +16,7 @@
                         <th scope="col">Date</th>
                         <th scope="col">Issue</th>
                         <th scope="col">Client Satisfied</th>
-                        <th scope="col">Self Confidence</th>
+                        <th scope="col">Confidence Level</th>
                         <th scope="col">Rating</th>
                     </tr>
                     </thead>

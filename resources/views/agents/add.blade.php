@@ -48,6 +48,7 @@
                                         <option selected>Choose</option>
                                         <option>Yes</option>
                                         <option>No</option>
+                                        <option>Maybe</option>
                                     </select>
                                 </div>
 
@@ -67,11 +68,12 @@
 
                                 <div class="col-md-12 form-group">
 
-                                    <label for="formGroupconfidence">Self Confidence</label>
+                                    <label for="formGroupconfidence">Confidence Level</label>
                                     <select class="form-control" id="slconfidence" name="client_confidence">
                                         <option selected>Choose</option>
-                                        <option>Yes</option>
-                                        <option>No</option>
+                                        <option>High</option>
+                                        <option>Medium</option>
+                                        <option>Low</option>
                                     </select>
 
                                 </div>

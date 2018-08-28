@@ -25,7 +25,7 @@
                 {{--</div>--}}
                 <div class="card-body">
                     <i class="fa fa-eye fa-4x" aria-hidden="true"></i>
-                    <h1 class="card-title pricing-card-title"><small class="text-muted">My Evaluations</small></h1>
+                    <h1 class="card-title pricing-card-title"><small class="text-muted">My Reports</small></h1>
                     {{--<ul class="list-unstyled mt-3 mb-4">--}}
                         {{--<li>20 users included</li>--}}
                         {{--<li>10 GB of storage</li>--}}
