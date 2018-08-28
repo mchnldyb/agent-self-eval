@@ -22,4 +22,6 @@ Route::get('/agent/admin', 'HomeController@adminIndex')->name('adminhome');
 Route::get('/agent/add', 'AgentController@index')->name('agentadd');
 Route::get('/agent/view', 'AgentController@showAll')->name('agentview');
 
+Route::get('/admin/{id}', 'AgentController@showSingleAgent')->name('singleagent');
+
 Route::post('/agents', 'AgentController@store');

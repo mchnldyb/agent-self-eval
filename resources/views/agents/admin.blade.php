@@ -34,7 +34,7 @@
                                 </div>
                                 <div class="card-footer">
                                     {{--<small class="text-muted">Last updated 3 mins ago</small>--}}
-                                    <button type="button" onclick="console.log({{$user->id}})" class="btn btn-lg btn-block btn-primary">View</button>
+                                    <button type="button" onclick="window.location='{{ url('/admin/'.$user->id) }}'" class="btn btn-lg btn-block btn-primary">View</button>
                                 </div>
                             </div>
                             {{--<tr>--}}
@@ -77,13 +77,13 @@
                         <div class="card-body">
                             <h5 class="card-title" style="text-align: center">All Agents</h5>
                             <div class="" style="text-align: center">
-                                <i class="fa fa-eye fa-4x" aria-hidden="true" ></i>
+                                <i class="fa fa-eye fa-4x" aria-hidden="true" style="color: green"></i>
                             </div>
 
                         </div>
                         <div class="card-footer">
                             {{--<small class="text-muted">Last updated 3 mins ago</small>--}}
-                            <button type="button" onclick="console.log('All')" class="btn btn-lg btn-block btn btn-success">View</button>
+                            <button type="button" onclick="window.location='{{ url('/admin/'.'all') }}'" class="btn btn-lg btn-block btn btn-success">View</button>
                         </div>
                     </div>
                 </div>
@@ -94,9 +94,9 @@
             @else
 
                 <div class="alert alert-warning" role="alert">
-                    <h4 class="alert-heading">No reports added!</h4>
+                    <h4 class="alert-heading">No users!</h4>
                     <hr>
-                    <p class="mb-0">Please add reports via the dashboard to see them here.</p>
+                    <p class="mb-0">No users registered yet !!</p>
                 </div>
 
             @endif

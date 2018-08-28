@@ -21,6 +21,7 @@ class CreateAgentsTable extends Migration
             $table->string('satisfaction');
             $table->string('confidence');
             $table->integer('rating');
+            $table->integer('fk_user');
             $table->timestamps();
         });
     }

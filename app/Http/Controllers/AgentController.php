@@ -67,6 +67,7 @@ class AgentController extends Controller
         $agent->satisfaction = $request->client_satisfied;
         $agent->confidence = $request->client_confidence;
         $agent->rating = $request->Self_Rating;
+        $agent->fk_user = Auth::user()->id;
 
 
 
@@ -94,8 +95,15 @@ class AgentController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function showSingleAgent($id)
     {
+        if ($id == 'all'){
+         $agents = Agent::all();
+        }
+        else{
+            $agents = Agent::where('fk_user', '=', $id)->get();
+        }
+        return view('agents.detail', compact('agents'));
         //
     }
 
