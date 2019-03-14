@@ -26,7 +26,7 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $admins = collect(['edmund.kumasa@gcnetghana.com', 'dramani.abdulai@gcnetghana.com', 'mackenzie.acquah@gcnetghana.com', 'roberta.nutakor@gcnetghana.com']);
+        $admins = collect(//get admin data here);
         $allusers = User::all();
         $users = collect([]);
 
